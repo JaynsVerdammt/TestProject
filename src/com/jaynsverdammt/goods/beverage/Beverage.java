@@ -1,8 +1,24 @@
-package com.jaynsverdammt.goods;
+package com.jaynsverdammt.goods.beverage;
+
+import com.jaynsverdammt.goods.IGoods;
+import com.jaynsverdammt.goods.Unit;
 
 public class Beverage implements IGoods {
+    public double getVolume() {
+        return volume;
+    }
+
+    private final double volume;
     private double price;
     private String name;
+    private final Unit unit;
+
+    public Beverage (String name, double price, double volume, Unit unit) {
+        this.name = name;
+        this.price = price;
+        this.unit = unit;
+        this.volume = volume;
+    }
 
     @Override
     public double getPrice() {
@@ -22,6 +38,11 @@ public class Beverage implements IGoods {
     @Override
     public void setName(String newName) {
         this.name = newName;
+    }
+
+    @Override
+    public Unit getUnit() {
+        return unit;
     }
 
     @Override

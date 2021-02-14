@@ -8,4 +8,6 @@ public interface IGoods {
     public String getName();
 
     public void setName(String newName);
+
+    public Unit getUnit();
 }

@@ -1,6 +1,9 @@
 package com.jaynsverdammt;
 
 import com.jaynsverdammt.goods.IGoods;
+import com.jaynsverdammt.goods.IMenuPlan;
+import com.jaynsverdammt.goods.beverage.Beverage;
+import com.jaynsverdammt.goods.beverage.BeverageMenu;
 
 import java.util.*;
 
@@ -33,4 +36,6 @@ public class Order {
         billString = billString.concat(String.format("Total Amount: %.2f", totalBill * 1.19));
         return billString;
     }
+
+
 }
